@@ -1,22 +1,23 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <title>Main Page</title>
-    <link rel="stylesheet" href="menucss.css">
+    <title>User Login</title>
+    <link rel="stylesheet" type="text/css" href="indexstyle.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="thingy.html">Gallery</a></li>
-                <li><a href="Untitled-1.html">CV</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Welcome to My Website</h1>
-        <p>You can navigate to any one part of my pages using the buttons above.</p>
-        <p>link to my website(for doctor Gilbert): https://webhw3menucvgallery.000webhostapp.com/</p>
-    </main>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" action="loginphp.php" method="post">
+            <input type="text" name="loginUsername" placeholder="Username" required>
+            <input type="password" name="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <div id="message"></div>
+        
+        <p>Don't have an account? <a href="registrationtml.html">Create Account</a></p>
+    </div>
+
+    <script src="registration.js"></script>
 </body>
 </html>

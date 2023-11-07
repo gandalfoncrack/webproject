@@ -4,12 +4,23 @@
     <title>Image Gallery</title>
 </head>
 <body>
+    <?php
+    session_start();
+    if (isset($_SESSION['username'])) {
+        $username = $_SESSION['username'];
+        echo "<div class='welcome'>Welcome, $username</div>";
+        echo "<a href='logout.php' class='logout-button'>Logout</a>";
+    } else {
+        header("Location: index.html"); // Redirect to the login page if not authenticated
+        exit;
+    }
+    ?>
     <div class="drop">
         <button class="button">Navigate</button>
         <div class="dropdown-content">
             <a href="Untitled-1.html">CV</a>
             <a href="Contact.html">Contact</a>
-            <a href="index.html">Menu</a>
+            <a href="menu.html">Menu</a>
         </div>
     </div>
     <p>Gallery</p>
