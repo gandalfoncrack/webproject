@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0px 10px;
+    font-family:cursive;
+    background-color: wheat;
+    font-size: 22px;
+}
+
+ul li a{
+    text-decoration: none;
+    color:  #f0f;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+ul li a:hover{
+    color: blue;
+}
