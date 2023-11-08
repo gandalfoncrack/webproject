@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0px 10px;
+    font-family:cursive;
+    background-color: wheat;
+    font-size: 22px;
+}
+
+ul li a{
+    text-decoration: none;
+    color:  #f0f;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+ul li a:hover{
+    color: blue;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.welcome-logout {
+    display: flex;
+    align-items: center;
+}
+
+.welcome {
+    font-size: 20px;
+    margin-right: 10px; 
+}
+
+.logout-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1710px;
+}
+
+.logout-button:hover {
+    background-color: #777;
+}
