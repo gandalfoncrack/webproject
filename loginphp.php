@@ -10,24 +10,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     foreach ($usersData as $user) {
         if ($user['username'] === $loginUsername && password_verify($loginPassword, $user['password'])) {
-            $response = ["message" => "User logged in successfully."];
-            echo json_encode($response);
+            $loginSuccess = true; // Set login success flag
             
-           
-            echo '<script>window.location.href = "menu.html";</script>';
+            session_start();
+            $_SESSION['username'] = $loginUsername; 
+            
+            // Redirect to menu.php
+            header("Location: menu.php");
             exit;
         }
     }
     
-    if ($loginSuccess) {
-        session_start();
-        $_SESSION['username'] = $loginUsername; 
-        $response = ["message" => "User logged in successfully."];
-        echo json_encode($response);
-    } else {
+    if (!$loginSuccess) {
         $response = ["error" => "Invalid username or password. Please try again."];
         echo json_encode($response);
     }
 }
 ?>
 
+?>
