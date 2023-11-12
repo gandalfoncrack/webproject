@@ -6,6 +6,9 @@ if (isset($_SESSION['username'])) {
     header("Location: ../index.html"); 
     exit;
 }
+
+$galleryData = json_decode(file_get_contents('../images/images.json'), true);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,30 +33,24 @@ if (isset($_SESSION['username'])) {
     </div>
     <p>Gallery</p>
     <div class="gallery">
-        <div class="thumbnail">
-            <a href="#img1">
-                <img src="../images/maxresdefault (1).jpg" >
-            </a>
-        </div>
-        <div class="thumbnail">
-            <a href="#img2">
-                <img src="../images/goofy.jpg" >
-            </a>
-        </div>
-    </div>
-    <div class="anim" id="img1">
-        <a href="#" class="close-btn">&times;</a>
-        <div class="zoomable">
-            <img src="../images/maxresdefault (1).jpg">
-        </div>
+        <?php foreach ($galleryData as $image): ?>
+            <div class="thumbnail">
+                <a href="#img<?php echo $image['id']; ?>">
+                    <img src="../images/<?php echo $image['name']; ?>" alt="<?php echo $image['alt']; ?>">
+                </a>
+            </div>
+        <?php endforeach; ?>
     </div>
 
-    <div class="anim" id="img2">
-        <a href="#" class="close-btn">&times;</a>
-        <div class="zoomable">
-            <img src="../images/goofy.jpg">
+    <?php foreach ($galleryData as $image): ?>
+        <div class="anim" id="img<?php echo $image['id']; ?>">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="zoomable">
+                <img src="../images/<?php echo $image['name']; ?>" alt="<?php echo $image['alt']; ?>">
+            </div>
         </div>
-    </div>
+    <?php endforeach; ?>
 </body>
 </html>
+
 
