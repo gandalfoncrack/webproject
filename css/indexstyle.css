@@ -1,60 +1,72 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Creepster', cursive;
+    background-color: #e67e22; 
+    color: #fff;
     margin: 0;
+    background-image: url('../images/halloween-background-vector-43260149.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
 }
 
 .container {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 450px; 
+    margin: 50px auto; 
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    background-color: #d35400; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000; 
 }
 
 form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+    width: calc(100% - 24px); 
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #c0392b; 
     border-radius: 5px;
+    background-color: #e67e22; 
+    color: #fff; 
 }
 
 button {
-    background-color: #333;
+    background-color: #c0392b;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #a93226; 
 }
 
 #message {
-    color: #f00;
+    color: #c0392b; 
     font-weight: bold;
 }
-.register{
-    margin-top: 10px;
+
+.register {
+    margin-top: 20px;
+    color: #000; 
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #a93226; 
     color: #fff;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 10px;
 }
+
+
 
 .welcome-logout {
     display: flex;
